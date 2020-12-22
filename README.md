@@ -3,6 +3,7 @@
 Performs initial classification of sample type. Default karton entrypoint for unrecognized samples.
 
 Author: CERT.pl
+
 Maintainers: nazywam
 
 **Consumes:**
