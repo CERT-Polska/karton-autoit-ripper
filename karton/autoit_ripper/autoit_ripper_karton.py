@@ -1,16 +1,17 @@
 from pathlib import Path
 
+from autoit_ripper import AutoItVersion, extract  # type: ignore
 from karton.core import Karton, Resource, Task  # type: ignore
 from malduck.yara import Yara  # type: ignore
 
-from autoit_ripper import extract, AutoItVersion  # type: ignore
-from .extract_drop import extract_binary
 from .__version__ import __version__
+from .extract_drop import extract_binary
 
 
 class AutoItRipperKarton(Karton):
     """
-    Extracts embedded AutoIt scripts from binaries and additionaly tries to extract some binary drops from scripts
+    Extracts embedded AutoIt scripts from binaries and additionaly
+    tries to extract some binary drops from scripts
     """
 
     identity = "karton.autoit-ripper"

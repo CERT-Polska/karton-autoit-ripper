@@ -5,7 +5,10 @@ from typing import Optional
 import regex  # type: ignore
 from malduck import rc4  # type: ignore
 
-BINARY_REGEX = r'(\$.*)\s*=\s*"([A-Fa-f0-9x])+"\s+(\1\s*=\s*\1\s*&\s*"([A-Fa-f0-9x]+)"\s*)+\1\s*=\s*.*\(\s*\1,\s*"(.*?)"'
+BINARY_REGEX = (
+    r'(\$.*)\s*=\s*"([A-Fa-f0-9x])+"\s+(\1\s*=\s'
+    r'*\1\s*&\s*"([A-Fa-f0-9x]+)"\s*)+\1\s*=\s*.*\(\s*\1,\s*"(.*?)"'
+)
 
 
 def extract_binary(data: str) -> Optional[bytes]:
