@@ -2,9 +2,9 @@
 
 Performs initial classification of sample type. Default karton entrypoint for unrecognized samples.
 
-Author: CERT.pl
+**Author**: CERT.pl
 
-Maintainers: nazywam
+**Maintainers**: nazywam
 
 **Consumes:**
 ```json
@@ -33,3 +33,17 @@ Maintainers: nazywam
     "extension": "au3",
 }
 ```
+
+## Usage
+
+First of all, make sure you have setup the core system: https://github.com/CERT-Polska/karton
+
+Then install karton-autoit-ripper from PyPi:
+
+```shell
+$ pip install karton-autoit-ripper
+
+$ karton-autoit-ripper
+```
+
+![Co-financed by the Connecting Europe Facility by of the European Union](https://www.cert.pl/wp-content/uploads/2019/02/en_horizontal_cef_logo-1.png)
