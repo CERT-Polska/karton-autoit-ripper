@@ -1,6 +1,6 @@
 # AutoIt-Ripper karton service
 
-Performs initial classification of sample type. Default karton entrypoint for unrecognized samples.
+Uses [AutoIt-Ripper](https://github.com/nazywam/AutoIt-Ripper) to automatically extract embedded AutoIt scripts and resources from compiled binaries.
 
 **Author**: CERT.pl
 

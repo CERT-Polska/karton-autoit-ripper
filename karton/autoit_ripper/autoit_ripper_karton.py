@@ -1,7 +1,7 @@
 from pathlib import Path
 
 from autoit_ripper import AutoItVersion, extract  # type: ignore
-from karton.core import Karton, Resource, Task  # type: ignore
+from karton.core import Karton, Resource, Task
 from malduck.yara import Yara  # type: ignore
 
 from .__version__ import __version__
@@ -37,7 +37,7 @@ class AutoItRipperKarton(Karton):
         yara_path = Path(__file__).parent / "autoit.yar"
         self.yara = Yara(rule_paths={"autoit": yara_path.as_posix()})
 
-    def process(self, task: Task) -> None:
+    def process(self, task: Task) -> None:  # type: ignore
         sample = task.get_resource("sample")
         resources = None
 
@@ -71,7 +71,14 @@ class AutoItRipperKarton(Karton):
                 self.log.info("Sending a task with %s", res_name)
                 script = Resource(res_name, res_data)
                 self.send_task(
-                    Task(task_params, payload={"sample": script, "parent": sample})
+                    Task(
+                        task_params,
+                        payload={
+                            "sample": script,
+                            "parent": sample,
+                            "tags": ["script:win32:au3"],
+                        },
+                    )
                 )
                 if res_name == "script.au3":
                     self.log.info("Looking for a binary embedded in the script")
