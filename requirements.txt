@@ -1,4 +1,4 @@
-karton-core==4.1.0
+karton-core>=4.1.0,<5.0.0
 malduck==3.1.0
 regex==2020.2.20
 autoit-ripper==1.0.0
