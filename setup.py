@@ -13,7 +13,10 @@ exec(version_path.read_text(), version_info)
 setup(
     name="karton-autoit-ripper",
     version=version_info["__version__"],
+    url="https://github.com/CERT-Polska/karton-autoit-ripper/",
     description="AutoIt script ripper for Karton framework",
+    long_description=open("README.md", "r").read(),
+    long_description_content_type="text/markdown",
     namespace_packages=["karton"],
     packages=["karton.autoit_ripper"],
     install_requires=open("requirements.txt").read().splitlines(),
