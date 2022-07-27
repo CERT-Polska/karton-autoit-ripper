@@ -37,7 +37,7 @@ class AutoItRipperKarton(Karton):
         yara_path = Path(__file__).parent / "autoit.yar"
         self.yara = Yara(rule_paths={"autoit": yara_path.as_posix()})
 
-    def process(self, task: Task) -> None:  # type: ignore
+    def process(self, task: Task) -> None:
         sample = task.get_resource("sample")
         resources = None
 
