@@ -40,3 +40,5 @@ jobs:
             certpl/${{ github.event.repository.name }}:${{ github.event.release.tag_name }}
             certpl/${{ github.event.repository.name }}:latest
           push: true
+          # Flux v1 doesn't support OCI-compliant manifests
+          provenance: false
