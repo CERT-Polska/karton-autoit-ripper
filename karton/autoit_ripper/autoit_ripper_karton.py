@@ -82,7 +82,12 @@ class AutoItRipperKarton(Karton):
                 )
                 if res_name == "script.au3":
                     self.log.info("Looking for a binary embedded in the script")
-                    drop = extract_binary(res_data.decode())
+                    drop = None
+                    try:
+                        drop = extract_binary(res_data.decode())
+                    except UnicodeDecodeError:
+                        pass
+
                     if drop:
                         self.log.info("Found an embedded binary")
                         self.send_task(
