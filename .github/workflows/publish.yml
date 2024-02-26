@@ -31,3 +31,5 @@ jobs:
           tags: |
             certpl/${{ github.event.repository.name }}:${{ github.sha }}
           push: ${{ github.event_name == 'push' }}
+          # Flux v1 doesn't support OCI-compliant manifests
+          provenance: false
