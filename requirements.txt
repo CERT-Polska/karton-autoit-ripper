@@ -1,4 +1,4 @@
 karton-core>=5.0.0,<6.0.0
 malduck==4.4.1
-regex==2026.2.28
+regex==2026.1.15
 autoit-ripper==1.2.0
