@@ -31,6 +31,10 @@ class AutoItRipperKarton(Karton):
             "platform": "win64",
         },
     ]
+    egress_filters = [
+        {"type": "sample", "kind": "raw"},
+        {"type": "sample", "kind": "script", "extension": "au3"},
+    ]
 
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
