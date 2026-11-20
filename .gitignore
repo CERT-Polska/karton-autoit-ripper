@@ -4,3 +4,5 @@ __pycache__
 venv
 .mypy_cache
 karton.ini
+build/
+*.egg-info
